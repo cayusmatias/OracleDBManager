@@ -47,7 +47,7 @@ Substitua **seu_usuario**, **sua_senha**, **seu_dsn** e **sua_senha_wallet** pel
 Aqui está um exemplo básico de como usar a classe **OracleDBManager**:
 
 ```python
-from oracledb_manager import OracleDBManager
+from class_oracle import OracleDBManager
 
 db_manager = OracleDBManager()
 
