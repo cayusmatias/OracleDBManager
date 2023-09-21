@@ -88,6 +88,12 @@ class OracleDBManager:
             for row in cursor:
                 print(row)
 
+    def drop_tabela(self, tabela):
+        with self.connection.cursor() as cursor:
+            cursor.execute(f"DROP TABLE {tabela}")
+            cursor.execute("commit")
+            print(f"Tabela {tabela} apagada com sucesso!")
+
     def close(self):
         self.connection.close()
 
@@ -108,7 +114,7 @@ if __name__ == "__main__":
     db_manager.executa_acao_bd("POVOAMENTO_UM_A_UM", "TEST")
     db_manager.executa_acao_bd("LISTAR", "TEST")
     # db_manager.cria_tabela_se_nao_existe("TEST3", colunas)
-    db_manager.lista_colunas("TEST3")
+    db_manager.lista_colunas("TEST")
     # db_manager.lista_tabelas()
 
     db_manager.close()

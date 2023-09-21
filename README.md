@@ -42,6 +42,20 @@ Substitua **seu_usuario**, **sua_senha**, **seu_dsn** e **sua_senha_wallet** pel
 
 **Nota**: Nunca compartilhe seu arquivo **.env** ou divulgue suas credenciais. O arquivo **.env** deve ser adicionado ao **.gitignore** para garantir que não seja enviado acidentalmente ao GitHub.
 
+## Métodos
+
+**cria_tabela_se_nao_existe(tabela, colunas)**: Verifica se uma tabela específica já existe no banco de dados. Se não existir, cria a tabela com as colunas e tipos de dados especificados.
+
+**executa_acao_bd(acao, tabela)**: Executa uma ação específica no banco de dados, como listar registros, truncar uma tabela ou popular uma tabela com dados.A ação é determinada pelo argumento acao e pode ser uma das seguintes: "LISTAR", "TRUNCATE", "POVOAMENTO_UM_A_UM", "POVOAMENTO".
+
+**lista_colunas(tabela)**: Lista os nomes das colunas de uma tabela específica.
+
+**lista_tabelas**: Lista todas as tabelas disponíveis no banco de dados.
+
+**drop_tabela(tabela)**: Apaga (ou "dropa") uma tabela específica do banco de dados.
+
+**close**: Fecha a conexão com o banco de dados.
+
 ## Uso
 
 Aqui está um exemplo básico de como usar a classe **OracleDBManager**:
