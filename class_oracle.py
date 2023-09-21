@@ -1,7 +1,6 @@
 import oracledb
 import os
 import dotenv
-import time
 from colorama import Fore, init
 
 
