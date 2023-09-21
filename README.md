@@ -72,6 +72,8 @@ colunas = {
 }
 
 db_manager.cria_tabela_se_nao_existe("TEST", colunas)
+db_manager.executa_acao_bd("POVOAMENTO_UM_A_UM", "TEST")
+db_manager.executa_acao_bd("LISTAR", "TEST")
 db_manager.lista_colunas("TEST")
 
 db_manager.close()

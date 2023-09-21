@@ -67,7 +67,6 @@ class OracleDBManager:
                     print(f"Chunk: {chunk}")
                     values = " ".join(f"INTO {tabela} VALUES ({index}, 'Hello World {dado}')" for index, dado in enumerate(chunk, start=i))
                     sql = f"INSERT ALL {values} SELECT * FROM dual"
-                    print(sql)
                     cursor.execute(sql)
                 cursor.execute("commit")
                 return "Povoamento realizado com sucesso!"
@@ -96,27 +95,3 @@ class OracleDBManager:
 
     def close(self):
         self.connection.close()
-
-
-if __name__ == "__main__":
-    start_time = time.time()
-
-    db_manager = OracleDBManager()
-
-    # Exemplo de uso:
-    colunas = {
-        "ID": "NUMBER",
-        "NOME": "VARCHAR2(50)",
-        "DATA": "VARCHAR2(50)"
-    }
-
-    db_manager.executa_acao_bd("TRUNCATE", "TEST")
-    db_manager.executa_acao_bd("POVOAMENTO_UM_A_UM", "TEST")
-    db_manager.executa_acao_bd("LISTAR", "TEST")
-    # db_manager.cria_tabela_se_nao_existe("TEST3", colunas)
-    db_manager.lista_colunas("TEST")
-    # db_manager.lista_tabelas()
-
-    db_manager.close()
-
-    print(f'Duração: {time.time() - start_time}')
