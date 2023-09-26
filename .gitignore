@@ -3,3 +3,4 @@ venv/
 .env
 Wallet_Oracle/
 teste.py
+info/

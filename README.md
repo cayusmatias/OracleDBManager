@@ -66,9 +66,9 @@ from class_oracle import OracleDBManager
 db_manager = OracleDBManager()
 
 colunas = {
-    "ID": "NUMBER",
-    "NOME": "VARCHAR2(50)",
-    "DADO": "VARCHAR2(50)"
+      "ID": "NUMBER",
+      "NOME": "VARCHAR2(50)",
+      "DADO": "VARCHAR2(50)"
 }
 
 db_manager.cria_tabela_se_nao_existe("TEST", colunas)

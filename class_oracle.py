@@ -52,18 +52,17 @@ class OracleDBManager:
 
             if acao == "POVOAMENTO_UM_A_UM":
                 query = f"INSERT INTO {tabela} (ID, DATA) VALUES (:indice, :dado)"
-                for indice, dado in enumerate(range(10)):
+                for indice, dado in enumerate(range(30)):
                     params = {'indice': indice, 'dado': f'Hello World {dado}'}
                     cursor.execute(query, params)
                 cursor.execute("commit")
                 return "Povoamento realizado com sucesso!"
 
             if acao == "POVOAMENTO":
-                dados = range(15)
-                chunk_size = 5
+                dados = range(30)
+                chunk_size = 10
                 for i in range(0, len(dados), chunk_size):
                     chunk = dados[i:i+chunk_size]
-                    print(f"Chunk: {chunk}")
                     values = " ".join(f"INTO {tabela} VALUES ({index}, 'Hello World {dado}')" for index, dado in enumerate(chunk, start=i))
                     sql = f"INSERT ALL {values} SELECT * FROM dual"
                     cursor.execute(sql)
