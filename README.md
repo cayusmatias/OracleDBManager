@@ -2,6 +2,8 @@
 
 **OracleDBManager** é uma classe Python para gerenciar operações comuns em um banco de dados Oracle. Ela encapsula funcionalidades como criação de tabelas, execução de ações e listagem de colunas/tabelas.
 
+**OracleDBManager** is a Python class for managing common operations on an Oracle database. It encapsulates functionalities such as table creation, action execution, and listing of columns/tables.
+
 ## Pré-requisitos
 
 - Python 3.x
