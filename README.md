@@ -7,7 +7,7 @@
 ## Pré-requisitos
 
 - Python 3.x
-- Bibliotecas: **oracledb**, **os**, **dotenv**, **time**, **colorama**
+- Libraries/Modules: **oracledb**, **os**, **dotenv**, **time**, **colorama**
 
 ## Instalação
 
@@ -25,9 +25,13 @@
 
 Antes de usar a classe **OracleDBManager**, você precisa configurar suas credenciais e informações de conexão. Isso é feito através de um arquivo **.env** e baixar a wallet de credencial.
 
+Before using the **OracleDBManager** class, you need to set up your credentials and connection information. This is done through a **.env** file and downloading the credential wallet.
+
 ### Wallet Autonomous Database Oracle
 
 Antes de utilizar a classe OracleDBManager, é essencial que você baixe a "wallet" de credenciais do banco de dados Oracle. A "wallet" é um conjunto de arquivos fornecidos pela Oracle que contém informações de segurança e configuração necessárias para estabelecer uma conexão segura. Ela é disponibilizada como um arquivo ZIP. Após o download, extraia o conteúdo desse arquivo ZIP na pasta **Wallet_Oracle** localizada no diretório raiz do projeto.
+
+Before using the **OracleDBManager** class, it's essential that you download the Oracle database's credential "wallet". The "wallet" is a set of files provided by Oracle that contains the necessary security and configuration information to establish a secure connection. It's made available as a ZIP file. After downloading, extract the contents of this ZIP file into the **Wallet_Oracle** folder located in the project's root directory.
 
 ### Criando o arquivo **.env**
 
